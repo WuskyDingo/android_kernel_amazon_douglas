@@ -1424,7 +1424,10 @@ struct ion_handle *ion_import_dma_buf(struct ion_client *client, int fd)
 	handle = ion_handle_create(client, buffer);
 	if (IS_ERR(handle)) {
 		mutex_unlock(&client->lock);
+<<<<<<< HEAD
 		IONMSG("%s handle is error 0x%p.\n", __func__, handle);
+=======
+>>>>>>> 606c9512a379... staging: ion: fix corruption of ion_import_dma_buf
 		goto end;
 	}
 
